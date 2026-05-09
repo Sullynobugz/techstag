@@ -1,41 +1,57 @@
-'use client'
-
 import React from 'react'
-import { motion } from 'framer-motion'
-import Link from 'next/link'
 
 export default function CTA() {
   return (
-    <section className="py-20 bg-primary-600">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6 }}
-          className="text-center"
-        >
-          <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-            Ready to Navigate Your AI Journey?
-          </h2>
-          <p className="text-xl text-primary-100 mb-8 max-w-3xl mx-auto">
-            Let's discuss how AI can transform your business. Get a free consultation 
-            and discover the possibilities waiting in your AI forest.
+    <section id="kontakt" className="relative py-32 bg-black circuit-bg overflow-hidden">
+
+      {/* Neon glow orb */}
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] rounded-full bg-neon/5 blur-3xl pointer-events-none" />
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[300px] h-[300px] rounded-full bg-neon/8 blur-2xl pointer-events-none animate-neon-pulse" />
+
+      {/* Corner deco */}
+      <div className="absolute top-12 left-12 w-8 h-8 border-t-2 border-l-2 border-neon/50" />
+      <div className="absolute top-12 right-12 w-8 h-8 border-t-2 border-r-2 border-neon/50" />
+      <div className="absolute bottom-12 left-12 w-8 h-8 border-b-2 border-l-2 border-neon/50" />
+      <div className="absolute bottom-12 right-12 w-8 h-8 border-b-2 border-r-2 border-neon/50" />
+
+      <div className="relative z-10 max-w-4xl mx-auto px-6 lg:px-8 text-center">
+
+        <div className="label-tag mb-8">// BEREIT ANZUFANGEN?</div>
+
+        <h2 className="section-title text-4xl md:text-6xl font-black leading-tight mb-8">
+          <span className="text-silver">Dein nächstes Projekt.</span>
+          <br />
+          <span className="neon-text animate-neon-flicker">KI-First.</span>
+        </h2>
+
+        <p className="font-body text-lg text-muted leading-relaxed mb-12 max-w-2xl mx-auto">
+          Egal ob SaaS-Idee, Automatisierungsprojekt oder KI-Integration — lass uns reden.
+          Kein Sales-Pitch, keine Agentur-Bürokratie. Direkt, schnell, ehrlich.
+        </p>
+
+        <div className="flex flex-col sm:flex-row gap-5 justify-center items-center">
+          <a
+            href="mailto:hallo@techstag.de"
+            className="neon-btn-fill text-sm"
+          >
+            hallo@techstag.de
+          </a>
+          <a
+            href="https://cal.com"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="neon-btn text-sm"
+          >
+            Call buchen →
+          </a>
+        </div>
+
+        {/* Bottom tagline */}
+        <div className="mt-16 pt-8 border-t border-neon/10">
+          <p className="font-mono text-[11px] text-muted/50 tracking-widest uppercase">
+            Kein Bullshit. Kein Overhead. Nur Software die funktioniert.
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link 
-              href="/contact" 
-              className="bg-white text-primary-600 hover:bg-gray-50 font-semibold py-4 px-8 rounded-lg transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-primary-600"
-            >
-              Start Your AI Journey
-            </Link>
-            <Link 
-              href="/services" 
-              className="border-2 border-white text-white hover:bg-white hover:text-primary-600 font-semibold py-4 px-8 rounded-lg transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-primary-600"
-            >
-              Learn More
-            </Link>
-          </div>
-        </motion.div>
+        </div>
       </div>
     </section>
   )

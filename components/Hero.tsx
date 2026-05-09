@@ -1,67 +1,102 @@
-'use client'
-
 import React from 'react'
-import { motion } from 'framer-motion'
-import Link from 'next/link'
-import Logo from './Logo'
+
+const STATS = [
+  { value: '8+', label: 'Produkte in Entwicklung' },
+  { value: '100%', label: 'KI-First Ansatz' },
+  { value: '0€', label: 'Vendor Lock-in' },
+  { value: '1', label: 'Team. Volle Power.' },
+]
 
 export default function Hero() {
   return (
-    <section className="pt-20 pb-16 bg-gradient-to-br from-gray-50 to-white">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid lg:grid-cols-2 gap-12 items-center">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-          >
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 leading-tight mb-6">
-              Navigate the AI Forest with{' '}
-              <span className="text-primary-600">Expert Guidance</span>
-            </h1>
-            <p className="text-xl text-gray-600 mb-8 leading-relaxed">
-              Transform your business with strategic AI solutions that cut through complexity. 
-              We guide you through the AI landscape with proven expertise and tailored strategies.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4">
-              <Link href="/contact" className="btn-primary text-center">
-                Start Your AI Journey
-              </Link>
-              <Link href="/services" className="btn-secondary text-center">
-                Explore Services
-              </Link>
+    <section className="relative min-h-screen bg-black circuit-bg flex flex-col overflow-hidden">
+
+      {/* Scanline overlay */}
+      <div className="scanlines absolute inset-0 pointer-events-none" />
+
+      {/* Animated scan bar */}
+      <div
+        className="absolute left-0 right-0 h-px bg-gradient-to-r from-transparent via-neon/40 to-transparent animate-scan pointer-events-none"
+        style={{ zIndex: 2 }}
+      />
+
+      {/* Corner decorations */}
+      <div className="absolute top-24 left-8 corner-tl w-16 h-16 relative pointer-events-none" />
+      <div className="absolute top-24 right-8 pointer-events-none">
+        <div className="relative w-16 h-16 corner-br" />
+      </div>
+
+      {/* Main content */}
+      <div className="relative z-10 flex flex-col lg:flex-row items-center justify-between max-w-7xl mx-auto px-6 lg:px-8 pt-36 pb-24 flex-1 gap-16">
+
+        {/* Left: Text */}
+        <div className="flex-1 max-w-2xl">
+          <div className="label-tag mb-8 animate-fade-up">// KI-FIRST SOFTWARE STUDIO</div>
+
+          <h1 className="section-title text-4xl md:text-6xl lg:text-7xl font-black leading-tight mb-8 animate-fade-up"
+            style={{ animationDelay: '0.1s', opacity: 0, animationFillMode: 'forwards' }}>
+            <span className="text-silver block">AI-Powered</span>
+            <span className="text-silver block">Software.</span>
+            <span className="neon-text block">Built to Scale.</span>
+          </h1>
+
+          <p className="font-body text-lg text-muted leading-relaxed mb-10 max-w-xl animate-fade-up"
+            style={{ animationDelay: '0.2s', opacity: 0, animationFillMode: 'forwards' }}>
+            Wir bauen KI-Produkte die wirklich funktionieren — keine Demos, keine Buzzwords.
+            Vom Business-Tool bis zur Automatisierungsplattform. Alles KI-First.
+          </p>
+
+          <div className="flex flex-col sm:flex-row gap-4 animate-fade-up"
+            style={{ animationDelay: '0.3s', opacity: 0, animationFillMode: 'forwards' }}>
+            <a href="#produkte" className="neon-btn-fill text-center">
+              Produkte entdecken
+            </a>
+            <a href="#kontakt" className="neon-btn text-center">
+              Projekt anfragen
+            </a>
+          </div>
+        </div>
+
+        {/* Right: Logo */}
+        <div className="flex-shrink-0 relative">
+          <div className="relative w-64 h-64 lg:w-80 lg:h-80 animate-float">
+            {/* Glow rings */}
+            <div className="absolute inset-0 rounded-full bg-neon/5 animate-neon-pulse scale-125" />
+            <div className="absolute inset-0 rounded-full bg-neon/10 animate-neon-pulse scale-110" style={{ animationDelay: '0.5s' }} />
+
+            <div className="relative w-full h-full rounded-2xl overflow-hidden neon-border shadow-neon">
+              <img
+                src="/assets/logo-futuristic.jpg"
+                alt="TechStag Logo"
+                className="w-full h-full object-cover"
+              />
             </div>
-          </motion.div>
-          
-          <motion.div
-            initial={{ opacity: 0, scale: 0.8 }}
-            animate={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 0.6, delay: 0.2 }}
-            className="relative flex justify-center"
-          >
-            <div className="w-64 h-64 rounded-2xl shadow-2xl overflow-hidden">
-              <Logo size="lg" className="text-white w-full h-full" />
+
+            {/* Corner decorations on logo card */}
+            <div className="absolute -top-2 -left-2 w-5 h-5 border-t-2 border-l-2 border-neon" />
+            <div className="absolute -bottom-2 -right-2 w-5 h-5 border-b-2 border-r-2 border-neon" />
+          </div>
+
+          {/* Floating data chip */}
+          <div className="absolute -top-4 -right-4 glass-card px-3 py-2 neon-border animate-float" style={{ animationDelay: '1s' }}>
+            <div className="font-mono text-[10px] text-neon tracking-widest">SYSTEM ONLINE</div>
+            <div className="flex items-center gap-1.5 mt-1">
+              <div className="w-1.5 h-1.5 rounded-full bg-neon animate-neon-pulse" />
+              <span className="font-mono text-[9px] text-muted">ALL SYSTEMS GO</span>
             </div>
-            {/* Floating elements */}
-            <motion.div
-              animate={{ y: [-10, 10, -10] }}
-              transition={{ duration: 3, repeat: Infinity }}
-              className="absolute -top-4 -right-4 bg-accent-500 rounded-full p-3 shadow-lg"
-            >
-              <svg className="w-6 h-6 text-white" fill="currentColor" viewBox="0 0 20 20">
-                <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
-              </svg>
-            </motion.div>
-            <motion.div
-              animate={{ y: [10, -10, 10] }}
-              transition={{ duration: 4, repeat: Infinity, delay: 1 }}
-              className="absolute -bottom-4 -left-4 bg-primary-300 rounded-full p-2 shadow-lg"
-            >
-              <svg className="w-4 h-4 text-primary-700" fill="currentColor" viewBox="0 0 20 20">
-                <path fillRule="evenodd" d="M11.49 3.17c-.38-1.56-2.6-1.56-2.98 0a1.532 1.532 0 01-2.286.948c-1.372-.836-2.942.734-2.106 2.106.54.886.061 2.042-.947 2.287-1.561.379-1.561 2.6 0 2.978a1.532 1.532 0 01.947 2.287c-.836 1.372.734 2.942 2.106 2.106a1.532 1.532 0 012.287.947c.379 1.561 2.6 1.561 2.978 0a1.533 1.533 0 012.287-.947c1.372.836 2.942-.734 2.106-2.106a1.533 1.533 0 01.947-2.287c1.561-.379 1.561-2.6 0-2.978a1.532 1.532 0 01-.947-2.287c.836-1.372-.734-2.942-2.106-2.106a1.532 1.532 0 01-2.287-.947zM10 13a3 3 0 100-6 3 3 0 000 6z" clipRule="evenodd" />
-              </svg>
-            </motion.div>
-          </motion.div>
+          </div>
+        </div>
+      </div>
+
+      {/* Stats bar */}
+      <div className="relative z-10 border-t border-neon/20 bg-surface/50">
+        <div className="max-w-7xl mx-auto px-6 lg:px-8 py-6 grid grid-cols-2 lg:grid-cols-4 gap-8">
+          {STATS.map(({ value, label }) => (
+            <div key={label} className="text-center">
+              <div className="font-display text-3xl font-black text-neon animate-neon-pulse">{value}</div>
+              <div className="font-mono text-[10px] text-muted tracking-widest uppercase mt-1">{label}</div>
+            </div>
+          ))}
         </div>
       </div>
     </section>

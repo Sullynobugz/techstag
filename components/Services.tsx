@@ -1,89 +1,113 @@
-'use client'
-
 import React from 'react'
-import { motion } from 'framer-motion'
 
-const services = [
+const SERVICES = [
   {
-    title: 'AI Strategy & Consulting',
-    description: 'Comprehensive roadmaps and feasibility assessments to align AI initiatives with your business goals.',
+    id: '01',
+    title: 'KI-Entwicklung',
+    desc: 'Custom AI-Applikationen auf Basis von Claude, GPT und Open-Source-Modellen. Von der Idee bis zum Deploy.',
     icon: (
-      <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={1.5} strokeLinecap="round" strokeLinejoin="round" className="w-7 h-7">
+        <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5" />
       </svg>
     ),
-    features: ['Strategic Planning', 'ROI Analysis', 'Risk Assessment', 'Implementation Roadmap']
   },
   {
-    title: 'Custom AI Development',
-    description: 'Tailored AI models and automation solutions built specifically for your unique business requirements.',
+    id: '02',
+    title: 'Business Automation',
+    desc: 'n8n-Workflows, API-Integrationen und intelligente Prozessautomatisierung die echten ROI liefern.',
     icon: (
-      <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4" />
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={1.5} strokeLinecap="round" strokeLinejoin="round" className="w-7 h-7">
+        <path d="M13 10V3L4 14h7v7l9-11h-7z" />
       </svg>
     ),
-    features: ['Machine Learning Models', 'Process Automation', 'Custom Algorithms', 'Performance Optimization']
   },
   {
-    title: 'AI Integration',
-    description: 'Seamless integration of AI solutions into your existing business processes and technology stack.',
+    id: '03',
+    title: 'SaaS-Produkte',
+    desc: 'Wir bauen vertikale SaaS-Tools für spezifische Märkte — schlank, schnell, profitabel.',
     icon: (
-      <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 7v10c0 2.21 3.582 4 8 4s8-1.79 8-4V7M4 7c0 2.21 3.582 4 8 4s8-1.79 8-4M4 7c0-2.21 3.582-4 8-4s8 1.79 8 4" />
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={1.5} strokeLinecap="round" strokeLinejoin="round" className="w-7 h-7">
+        <rect x="2" y="3" width="20" height="14" rx="2" />
+        <path d="M8 21h8M12 17v4" />
       </svg>
     ),
-    features: ['System Integration', 'API Development', 'Data Pipeline Setup', 'Training & Support']
-  }
+  },
+  {
+    id: '04',
+    title: 'Data & Analytics',
+    desc: 'Business Intelligence, KPI-Dashboards und KI-Analyse die Entscheidungen smarter macht.',
+    icon: (
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={1.5} strokeLinecap="round" strokeLinejoin="round" className="w-7 h-7">
+        <path d="M3 3v18h18" />
+        <path d="M7 16l4-4 4 4 4-8" />
+      </svg>
+    ),
+  },
+  {
+    id: '05',
+    title: 'Rapid Prototyping',
+    desc: 'Von der Idee zum funktionalen Prototypen in Tagen, nicht Monaten. Validieren bevor investiert wird.',
+    icon: (
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={1.5} strokeLinecap="round" strokeLinejoin="round" className="w-7 h-7">
+        <circle cx="12" cy="12" r="10" />
+        <path d="M12 8v4l3 3" />
+      </svg>
+    ),
+  },
+  {
+    id: '06',
+    title: 'Cloud Deployment',
+    desc: 'Hetzner, Coolify, Docker — skalierbare Infrastruktur ohne Big-Tech-Preise.',
+    icon: (
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={1.5} strokeLinecap="round" strokeLinejoin="round" className="w-7 h-7">
+        <path d="M18 10h-1.26A8 8 0 1 0 9 20h9a5 5 0 0 0 0-10z" />
+      </svg>
+    ),
+  },
 ]
 
 export default function Services() {
   return (
-    <section className="py-20 bg-white">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6 }}
-          className="text-center mb-16"
-        >
-          <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-            Our AI Services
-          </h2>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            From strategy to implementation, we provide comprehensive AI solutions 
-            that drive real business results.
-          </p>
-        </motion.div>
+    <section id="services" className="py-28 bg-black circuit-bg">
+      <div className="max-w-7xl mx-auto px-6 lg:px-8">
 
-        <div className="grid md:grid-cols-3 gap-8">
-          {services.map((service, index) => (
-            <motion.div
-              key={service.title}
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: index * 0.1 }}
-              className="bg-gray-50 rounded-xl p-8 hover:shadow-lg transition-shadow duration-300"
-            >
-              <div className="text-primary-600 mb-4">
-                {service.icon}
+        {/* Header */}
+        <div className="text-center mb-20">
+          <div className="label-tag mb-6">// WHAT WE BUILD</div>
+          <h2 className="section-title text-3xl md:text-5xl font-black text-silver mb-6">
+            Unsere <span className="neon-text">Services</span>
+          </h2>
+          <p className="font-body text-muted text-lg max-w-2xl mx-auto">
+            Kein Agentur-Overhead. Kein Bullshit. Nur Software die funktioniert.
+          </p>
+        </div>
+
+        {/* Grid */}
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+          {SERVICES.map(({ id, title, desc, icon }) => (
+            <div key={id} className="glass-card relative p-8 rounded-xl overflow-hidden group">
+
+              {/* ID number */}
+              <div className="font-mono text-[10px] text-neon/40 tracking-widest mb-6 group-hover:text-neon/70 transition-colors">
+                {id} ────────────
               </div>
-              <h3 className="text-xl font-semibold text-gray-900 mb-4">
-                {service.title}
+
+              {/* Icon */}
+              <div className="text-neon mb-5 group-hover:drop-shadow-[0_0_8px_rgba(0,212,255,0.8)] transition-all">
+                {icon}
+              </div>
+
+              {/* Text */}
+              <h3 className="section-title text-base font-bold text-silver mb-3">
+                {title}
               </h3>
-              <p className="text-gray-600 mb-6">
-                {service.description}
+              <p className="font-body text-sm text-muted leading-relaxed">
+                {desc}
               </p>
-              <ul className="space-y-2">
-                {service.features.map((feature) => (
-                  <li key={feature} className="flex items-center text-sm text-gray-700">
-                    <svg className="w-4 h-4 text-accent-500 mr-2" fill="currentColor" viewBox="0 0 20 20">
-                      <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
-                    </svg>
-                    {feature}
-                  </li>
-                ))}
-              </ul>
-            </motion.div>
+
+              {/* Hover glow line */}
+              <div className="absolute bottom-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-neon/0 to-transparent group-hover:via-neon/60 transition-all duration-500" />
+            </div>
           ))}
         </div>
       </div>

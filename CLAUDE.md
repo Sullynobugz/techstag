@@ -115,6 +115,7 @@ npm run lint   # ESLint
 <!-- Neueste Einträge zuerst -->
 | Datum | Was & Warum |
 |-------|-------------|
+| 2026-05-31 | AZAV-Weiterbildung als 4. Standbein unter TechStag dokumentiert — Digitales-Klassenzimmer-Beschluss als Enabler, KI-Know-how aus Projekten als Curriculum-Basis |
 | 2026-05-07 | CLAUDE.md angelegt — Projektdokumentation initialisiert |
 
 

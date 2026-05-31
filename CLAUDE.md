@@ -6,10 +6,36 @@ TechStag ist die übergeordnete Marke und Plattform für alle KI-Dienstleistunge
 1. **Chief** — Flagship-SaaS-Produkt (All-in-One Business Intelligence, ~1.000€/Monat pro Unternehmen)
 2. **Webglow** — Website-Redesign-Dienstleistungen für Kunden (KI-gestützt)
 3. **KI-Beratung & Schulungen** — Implementierung, Automatisierung, ggf. AZAV-Zertifizierung für geförderte Weiterbildungen
+4. **AZAV-Weiterbildung (geplant)** — Eigene zertifizierte KI-Weiterbildung unter TechStag (siehe unten)
 
 **Rolle der Website**: Haupt-Marketingkanal und Vertriebsplattform. Generiert Leads für Chief und die Agenturdienstleistungen. Conversion-optimiert mit klaren CTAs pro Produkt/Service.
 
 **Zielkunden**: KMU (10–100 MA) die KI-Potenzial erkennen aber nicht wissen wo anfangen — entweder als Chief-Kunden oder als Beratungskunden.
+
+---
+
+## Strategische Säule: AZAV-Weiterbildung (parallel zum B2B-Approach)
+
+### Idee
+TechStag plant neben dem B2B-Dienstleistungsgeschäft (Webglow, Chief, Beratung) eine eigene **AZAV-zertifizierte KI-Weiterbildung** anzubieten. Inhalte: praktische KI-Anwendung für Berufseinsteiger, Umschüler und Mitarbeiter in KMU — alles was durch den Aufbau der eigenen Projekte gelernt wurde.
+
+### Warum jetzt realistisch
+- **Digitales Klassenzimmer-Beschluss (2025)**: Rechtliche Grundlage für vollständig digitale, geförderte Weiterbildungen wurde geschaffen — kein Präsenzzwang mehr. TechStag kann Kurse 100% remote anbieten.
+- **Förderfähigkeit**: AZAV-Zertifizierung ermöglicht Förderung durch Agentur für Arbeit (Bildungsgutschein) und BMAS — Teilnehmer zahlen nichts, TechStag bekommt Kursgebühren vom Amt.
+- **Vorhandenes Know-how**: Der gesamte Prozess von App-Entwicklung mit KI, Prompt Engineering, Automatisierung mit n8n, KI-gestütztes Webdesign (Webglow) etc. ist praxiserprobt und direkt lehrbar.
+
+### Nächste Schritte (noch nicht terminiert)
+- [ ] Trägerschaft prüfen: Eigene AZAV-Zertifizierung beantragen (Mamooon UG oder neue Entität) oder als Kooperationspartner bei bestehendem Träger starten
+- [ ] Curriculum skizzieren: Welche konkreten KI-Skills werden vermittelt? (Prompt Engineering, KI-Tools im Arbeitsalltag, Automatisierung, No-Code KI)
+- [ ] Marktcheck: Welche AZAV-Weiterbildungen zu KI gibt es bereits, was fehlt?
+- [ ] Rechtliche Prüfung: AZAV-Anforderungen (Qualitätsmanagementsystem, Lehrpläne, Nachweise)
+
+### Synergien mit bestehendem TechStag-Geschäft
+- Absolventen werden zu potenziellen Kunden für Chief und Webglow
+- Webglow-Demos können direkt als Unterrichtsmaterial dienen
+- TechStag-Projekte (Energiecheck, Apps) als Fallstudien im Curriculum
+
+---
 
 ## Tech Stack
 - **Framework**: Next.js 14 (App Router)

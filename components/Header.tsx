@@ -24,8 +24,12 @@ export default function Header() {
 
           {/* Logo */}
           <Link href="/" className="flex items-center gap-3 group">
-            <div className="w-16 h-11 rounded-lg overflow-hidden ring-1 ring-neon/30 group-hover:ring-neon/70 transition-all group-hover:shadow-neon-sm">
-              <img src="/assets/logo-futuristic.jpg" alt="TechStag" className="w-full h-full object-cover object-top" />
+            <div className="w-14 h-14 rounded-lg overflow-hidden relative ring-1 ring-neon/30 group-hover:ring-neon/70 transition-all group-hover:shadow-neon-sm">
+              <img
+                src="/assets/logo-futuristic.jpg"
+                alt="TechStag"
+                style={{ position: 'absolute', width: '140%', height: '140%', top: 0, left: '-20%', objectFit: 'cover' }}
+              />
             </div>
             <span className="font-display text-lg font-bold tracking-widest text-neon uppercase">
               TechStag

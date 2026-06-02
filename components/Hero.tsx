@@ -51,9 +51,6 @@ export default function Hero() {
             <a href="#services" className="neon-btn-fill text-center">
               Services entdecken
             </a>
-            <a href="#kontakt" className="neon-btn text-center">
-              Projekt anfragen
-            </a>
           </div>
         </div>
 

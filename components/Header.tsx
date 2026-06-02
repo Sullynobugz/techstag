@@ -36,7 +36,6 @@ export default function Header() {
           <div className="hidden md:flex items-center gap-8">
             {[
               { href: '#services', label: 'Services' },
-              { href: '#kontakt', label: 'Kontakt' },
             ].map(({ href, label }) => (
               <a
                 key={href}
@@ -46,9 +45,6 @@ export default function Header() {
                 {label}
               </a>
             ))}
-            <a href="#kontakt" className="neon-btn text-xs">
-              Projekt starten
-            </a>
           </div>
 
           {/* Mobile Toggle */}
@@ -70,7 +66,6 @@ export default function Header() {
           <div className="md:hidden border-t border-neon/20 py-6 flex flex-col gap-4">
             {[
               { href: '#services', label: 'Services' },
-              { href: '#kontakt', label: 'Kontakt' },
             ].map(({ href, label }) => (
               <a
                 key={href}
@@ -81,9 +76,6 @@ export default function Header() {
                 {label}
               </a>
             ))}
-            <a href="#kontakt" className="neon-btn text-xs text-center mt-2" onClick={() => setIsMenuOpen(false)}>
-              Projekt starten
-            </a>
           </div>
         )}
       </nav>

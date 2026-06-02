@@ -21,13 +21,8 @@ export default function Footer() {
           </div>
 
           <div>
-            <div className="font-mono text-[10px] text-muted/60 tracking-widest uppercase mb-5">Kontakt</div>
+            <div className="font-mono text-[10px] text-muted/60 tracking-widest uppercase mb-5">Links</div>
             <ul className="space-y-3">
-              <li>
-                <a href="mailto:hallo@techstag.de" className="font-mono text-xs text-muted hover:text-neon transition-colors">
-                  hallo@techstag.de
-                </a>
-              </li>
               <li>
                 <a href="https://github.com/sullynobugz" target="_blank" rel="noopener noreferrer" className="font-mono text-xs text-muted hover:text-neon transition-colors">
                   GitHub

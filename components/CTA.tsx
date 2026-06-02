@@ -29,22 +29,6 @@ export default function CTA() {
           Kein Sales-Pitch, keine Agentur-Bürokratie. Direkt, schnell, ehrlich.
         </p>
 
-        <div className="flex flex-col sm:flex-row gap-5 justify-center items-center">
-          <a
-            href="mailto:hallo@techstag.de"
-            className="neon-btn-fill text-sm"
-          >
-            hallo@techstag.de
-          </a>
-          <a
-            href="https://cal.com"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="neon-btn text-sm"
-          >
-            Call buchen →
-          </a>
-        </div>
 
         {/* Bottom tagline */}
         <div className="mt-16 pt-8 border-t border-neon/10">

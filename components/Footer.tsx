@@ -20,20 +20,6 @@ export default function Footer() {
             </p>
           </div>
 
-          {/* Links */}
-          <div>
-            <div className="font-mono text-[10px] text-muted/60 tracking-widest uppercase mb-5">Produkte</div>
-            <ul className="space-y-3">
-              {['Chief', 'Spare', 'Quest', 'Clipzy'].map(name => (
-                <li key={name}>
-                  <span className="font-mono text-xs text-muted hover:text-neon transition-colors cursor-pointer">
-                    {name}
-                  </span>
-                </li>
-              ))}
-            </ul>
-          </div>
-
           <div>
             <div className="font-mono text-[10px] text-muted/60 tracking-widest uppercase mb-5">Kontakt</div>
             <ul className="space-y-3">

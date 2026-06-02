@@ -35,7 +35,6 @@ export default function Header() {
           {/* Desktop Nav */}
           <div className="hidden md:flex items-center gap-8">
             {[
-              { href: '#produkte', label: 'Produkte' },
               { href: '#services', label: 'Services' },
               { href: '#kontakt', label: 'Kontakt' },
             ].map(({ href, label }) => (
@@ -70,7 +69,6 @@ export default function Header() {
         {isMenuOpen && (
           <div className="md:hidden border-t border-neon/20 py-6 flex flex-col gap-4">
             {[
-              { href: '#produkte', label: 'Produkte' },
               { href: '#services', label: 'Services' },
               { href: '#kontakt', label: 'Kontakt' },
             ].map(({ href, label }) => (

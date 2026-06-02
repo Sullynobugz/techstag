@@ -1,9 +1,9 @@
 import React from 'react'
 
 const STATS = [
-  { value: '8+', label: 'Produkte in Entwicklung' },
   { value: '100%', label: 'KI-First Ansatz' },
   { value: '0€', label: 'Vendor Lock-in' },
+  { value: 'DE', label: 'Hosting in Deutschland' },
   { value: '1', label: 'Team. Volle Power.' },
 ]
 
@@ -48,8 +48,8 @@ export default function Hero() {
 
           <div className="flex flex-col sm:flex-row gap-4 animate-fade-up"
             style={{ animationDelay: '0.3s', opacity: 0, animationFillMode: 'forwards' }}>
-            <a href="#produkte" className="neon-btn-fill text-center">
-              Produkte entdecken
+            <a href="#services" className="neon-btn-fill text-center">
+              Services entdecken
             </a>
             <a href="#kontakt" className="neon-btn text-center">
               Projekt anfragen

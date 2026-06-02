@@ -24,7 +24,7 @@ export default function Header() {
 
           {/* Logo */}
           <Link href="/" className="flex items-center gap-3 group">
-            <div className="w-10 h-10 rounded overflow-hidden ring-1 ring-neon/30 group-hover:ring-neon/70 transition-all group-hover:shadow-neon-sm">
+            <div className="w-14 h-14 rounded-lg overflow-hidden ring-1 ring-neon/30 group-hover:ring-neon/70 transition-all group-hover:shadow-neon-sm">
               <img src="/assets/logo-futuristic.jpg" alt="TechStag" className="w-full h-full object-cover" />
             </div>
             <span className="font-display text-lg font-bold tracking-widest text-neon uppercase">

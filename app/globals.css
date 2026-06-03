@@ -193,6 +193,32 @@
     font-size: 0.7em;
   }
 
+  /* Dark form inputs */
+  .contact-input {
+    width: 100%;
+    background: rgba(5, 5, 8, 0.8);
+    border: 1px solid rgba(0, 212, 255, 0.2);
+    color: #c0c8d8;
+    font-family: 'Exo 2', system-ui, sans-serif;
+    font-size: 0.875rem;
+    padding: 0.75rem 1rem;
+    outline: none;
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
+    -webkit-appearance: none;
+    appearance: none;
+  }
+  .contact-input::placeholder {
+    color: rgba(192, 200, 216, 0.3);
+  }
+  .contact-input:focus {
+    border-color: rgba(0, 212, 255, 0.6);
+    box-shadow: 0 0 0 1px rgba(0, 212, 255, 0.2), 0 0 12px rgba(0, 212, 255, 0.1);
+  }
+  .contact-input option {
+    background: #0a0d14;
+    color: #c0c8d8;
+  }
+
   /* Holographic shimmer on cards */
   .holo-card {
     position: relative;
@@ -215,6 +241,32 @@
     animation: holo-sweep 4s ease-in-out infinite;
     pointer-events: none;
     z-index: 1;
+  }
+}
+
+/* GPU-Beschleunigung für animierte Elemente */
+.animate-float,
+.animate-scan,
+.animate-neon-pulse,
+.holo-card::before,
+.glitch::before,
+.glitch::after {
+  will-change: transform, opacity;
+  transform: translateZ(0);
+}
+
+/* Animationen für Nutzer die reduzierte Bewegung bevorzugen */
+@media (prefers-reduced-motion: reduce) {
+  .animate-float,
+  .animate-scan,
+  .glitch::before,
+  .glitch::after,
+  .holo-card::before,
+  .typing-cursor::after {
+    animation: none;
+  }
+  .glass-card:hover {
+    transform: none;
   }
 }
 

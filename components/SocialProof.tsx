@@ -57,11 +57,11 @@ export default function SocialProof() {
   const rest = PRODUCTS.filter(p => !p.flagship)
 
   return (
-    <section id="produkte" className="py-28 bg-surface">
+    <section id="produkte" className="py-16 md:py-28 bg-surface">
       <div className="max-w-7xl mx-auto px-6 lg:px-8">
 
         {/* Header */}
-        <div className="text-center mb-20">
+        <div className="text-center mb-10 md:mb-20">
           <div className="label-tag mb-6">// OUR PORTFOLIO</div>
           <h2 className="section-title text-3xl md:text-5xl font-black text-silver mb-6">
             8+ <span className="neon-text">Produkte</span> in Entwicklung

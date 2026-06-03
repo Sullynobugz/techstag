@@ -2,7 +2,7 @@ import React from 'react'
 
 export default function CTA() {
   return (
-    <section id="kontakt" className="relative py-32 bg-black circuit-bg overflow-hidden">
+    <section id="kontakt" className="relative py-20 md:py-32 bg-black circuit-bg overflow-hidden">
 
       {/* Neon glow orb */}
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] rounded-full bg-neon/5 blur-3xl pointer-events-none" />
@@ -24,14 +24,14 @@ export default function CTA() {
           <span className="neon-text animate-neon-flicker">KI-First.</span>
         </h2>
 
-        <p className="font-body text-lg text-muted leading-relaxed mb-12 max-w-2xl mx-auto">
+        <p className="font-body text-lg text-muted leading-relaxed mb-8 md:mb-12 max-w-2xl mx-auto">
           Egal ob SaaS-Idee, Automatisierungsprojekt oder KI-Integration — lass uns reden.
           Kein Sales-Pitch, keine Agentur-Bürokratie. Direkt, schnell, ehrlich.
         </p>
 
 
         {/* Bottom tagline */}
-        <div className="mt-16 pt-8 border-t border-neon/10">
+        <div className="mt-10 md:mt-16 pt-8 border-t border-neon/10">
           <p className="font-mono text-[11px] text-muted/50 tracking-widest uppercase">
             Kein Overhead. Keine leeren Versprechen. Nur Ergebnisse die zählen.
           </p>

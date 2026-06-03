@@ -23,24 +23,34 @@ export default function Header() {
         <div className="flex items-center justify-between pt-3 pb-0">
 
           {/* Logo */}
-          <Link href="/" className="flex items-end gap-2 group self-end">
-            {/* Hirschkopf — obere 68% des quadratischen Logos */}
-            <div className="flex-shrink-0 overflow-hidden" style={{ width: 130, height: 89 }}>
-              <img
-                src="/assets/logo-futuristic.jpg"
-                alt="TechStag"
-                style={{ width: 130, height: 'auto' }}
-                className="drop-shadow-[0_0_8px_rgba(0,212,255,0.4)] group-hover:drop-shadow-[0_0_14px_rgba(0,212,255,0.7)] transition-all duration-300"
-              />
+          <Link href="/" className="flex items-end group self-end">
+            {/* Mobile: 65% Skalierung */}
+            <div className="flex items-end gap-1 md:hidden">
+              <div className="flex-shrink-0 overflow-hidden" style={{ width: 85, height: 58 }}>
+                <img
+                  src="/assets/logo-futuristic.jpg"
+                  alt="TechStag"
+                  style={{ width: 85, height: 'auto' }}
+                  className="drop-shadow-[0_0_8px_rgba(0,212,255,0.4)] group-hover:drop-shadow-[0_0_14px_rgba(0,212,255,0.7)] transition-all duration-300"
+                />
+              </div>
+              <div className="flex-shrink-0 overflow-hidden" style={{ width: 145, height: 31 }}>
+                <img src="/assets/logo-futuristic.jpg" alt="" aria-hidden="true" style={{ width: 145, height: 'auto', marginTop: -100 }} />
+              </div>
             </div>
-            {/* TECHSTAG-Schriftzug — untere 26% des Logos, unabhängig skaliert */}
-            <div className="flex-shrink-0 overflow-hidden" style={{ width: 220, height: 48 }}>
-              <img
-                src="/assets/logo-futuristic.jpg"
-                alt=""
-                aria-hidden="true"
-                style={{ width: 220, height: 'auto', marginTop: -154 }}
-              />
+            {/* Desktop: originale Größe */}
+            <div className="hidden md:flex items-end gap-2">
+              <div className="flex-shrink-0 overflow-hidden" style={{ width: 130, height: 89 }}>
+                <img
+                  src="/assets/logo-futuristic.jpg"
+                  alt="TechStag"
+                  style={{ width: 130, height: 'auto' }}
+                  className="drop-shadow-[0_0_8px_rgba(0,212,255,0.4)] group-hover:drop-shadow-[0_0_14px_rgba(0,212,255,0.7)] transition-all duration-300"
+                />
+              </div>
+              <div className="flex-shrink-0 overflow-hidden" style={{ width: 220, height: 48 }}>
+                <img src="/assets/logo-futuristic.jpg" alt="" aria-hidden="true" style={{ width: 220, height: 'auto', marginTop: -154 }} />
+              </div>
             </div>
           </Link>
 
@@ -78,7 +88,7 @@ export default function Header() {
 
         {/* Mobile Menu */}
         {isMenuOpen && (
-          <div className="md:hidden border-t border-neon/20 py-6 flex flex-col gap-4">
+          <div className="md:hidden border-t border-neon/20 py-4 flex flex-col">
             {[
               { href: '/#services', label: 'Services' },
               { href: '/#portfolio', label: 'Portfolio' },
@@ -89,7 +99,7 @@ export default function Header() {
                 key={href}
                 href={href}
                 onClick={() => setIsMenuOpen(false)}
-                className="nav-link font-mono text-xs tracking-widest text-muted hover:text-neon transition-colors uppercase"
+                className="font-mono text-sm tracking-widest text-muted hover:text-neon transition-colors uppercase py-3 border-b border-neon/10 last:border-b-0"
               >
                 {label}
               </a>

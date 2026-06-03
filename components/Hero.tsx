@@ -62,7 +62,7 @@ export default function Hero() {
       </div>
 
       {/* Main content */}
-      <div className="relative z-10 flex flex-col lg:flex-row items-center justify-between max-w-7xl mx-auto px-6 lg:px-8 pt-36 pb-24 flex-1 gap-16">
+      <div className="relative z-10 flex flex-col lg:flex-row items-center justify-between max-w-7xl mx-auto px-6 lg:px-8 pt-24 md:pt-36 pb-12 md:pb-24 flex-1 gap-8 md:gap-16">
 
         {/* Left: Text */}
         <div className="flex-1 max-w-2xl">
@@ -154,7 +154,7 @@ export default function Hero() {
 
       {/* Stats bar */}
       <div className="relative z-10 border-t border-neon/20 bg-surface/50">
-        <div className="max-w-7xl mx-auto px-6 lg:px-8 py-6 grid grid-cols-2 lg:grid-cols-4 gap-8">
+        <div className="max-w-7xl mx-auto px-6 lg:px-8 py-5 grid grid-cols-2 lg:grid-cols-4 gap-4 md:gap-8">
           {STATS.map(({ value, suffix, label }) => (
             <div key={label} className="text-center">
               <CountUp target={value} suffix={suffix} />

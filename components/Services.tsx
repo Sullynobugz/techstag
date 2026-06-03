@@ -68,11 +68,11 @@ const SERVICES = [
 
 export default function Services() {
   return (
-    <section id="services" className="py-28 bg-black circuit-bg">
+    <section id="services" className="py-16 md:py-28 bg-black circuit-bg">
       <div className="max-w-7xl mx-auto px-6 lg:px-8">
 
         {/* Header */}
-        <div className="text-center mb-20">
+        <div className="text-center mb-10 md:mb-20">
           <div className="label-tag mb-6">// WHAT WE BUILD</div>
           <h2 className="section-title text-3xl md:text-5xl font-black text-silver mb-6">
             Unsere <span className="neon-text">Services</span>

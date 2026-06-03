@@ -193,6 +193,25 @@
     font-size: 0.7em;
   }
 
+  /* Nav link underline — slides von links nach rechts */
+  .nav-link {
+    position: relative;
+  }
+  .nav-link::after {
+    content: '';
+    position: absolute;
+    bottom: -3px;
+    left: 0;
+    width: 0;
+    height: 1px;
+    background: #00d4ff;
+    box-shadow: 0 0 6px rgba(0, 212, 255, 0.8);
+    transition: width 0.25s ease;
+  }
+  .nav-link:hover::after {
+    width: 100%;
+  }
+
   /* Dark form inputs */
   .contact-input {
     width: 100%;

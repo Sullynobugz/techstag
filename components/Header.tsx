@@ -34,12 +34,12 @@ export default function Header() {
               />
             </div>
             {/* TECHSTAG-Schriftzug — untere 26% des Logos, unabhängig skaliert */}
-            <div className="flex-shrink-0 overflow-hidden" style={{ width: 200, height: 44 }}>
+            <div className="flex-shrink-0 overflow-hidden" style={{ width: 220, height: 48 }}>
               <img
                 src="/assets/logo-futuristic.jpg"
                 alt=""
                 aria-hidden="true"
-                style={{ width: 200, height: 'auto', marginTop: -140 }}
+                style={{ width: 220, height: 'auto', marginTop: -154 }}
               />
             </div>
           </Link>
@@ -55,7 +55,7 @@ export default function Header() {
               <a
                 key={href}
                 href={href}
-                className="font-mono text-xs tracking-widest text-muted hover:text-neon transition-colors uppercase"
+                className="nav-link font-mono text-xs tracking-widest text-muted hover:text-neon transition-colors uppercase"
               >
                 {label}
               </a>
@@ -89,7 +89,7 @@ export default function Header() {
                 key={href}
                 href={href}
                 onClick={() => setIsMenuOpen(false)}
-                className="font-mono text-xs tracking-widest text-muted hover:text-neon transition-colors uppercase"
+                className="nav-link font-mono text-xs tracking-widest text-muted hover:text-neon transition-colors uppercase"
               >
                 {label}
               </a>

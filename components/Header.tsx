@@ -15,11 +15,11 @@ export default function Header() {
 
   return (
     <header
-      className={`fixed w-full z-50 transition-all duration-300 ${
-        scrolled ? 'bg-black/95 backdrop-blur-md border-b border-neon/20' : 'bg-transparent'
+      className={`fixed w-full z-50 transition-all duration-300 bg-black/95 backdrop-blur-md border-b border-neon/20 ${
+        scrolled ? 'md:bg-black/95 md:backdrop-blur-md' : 'md:bg-transparent md:backdrop-blur-none md:border-b-0'
       }`}
     >
-      <nav className="max-w-7xl mx-auto px-6 lg:px-8">
+      <nav className="max-w-7xl mx-auto px-4 md:px-6 lg:px-8">
         <div className="flex items-center justify-between pt-3 pb-0">
 
           {/* Logo */}

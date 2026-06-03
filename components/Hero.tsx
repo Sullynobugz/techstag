@@ -62,14 +62,14 @@ export default function Hero() {
       </div>
 
       {/* Main content */}
-      <div className="relative z-10 flex flex-col lg:flex-row items-center justify-between max-w-7xl mx-auto px-6 lg:px-8 pt-24 md:pt-36 pb-12 md:pb-24 flex-1 gap-8 md:gap-16">
+      <div className="relative z-10 flex flex-col lg:flex-row items-start lg:items-center justify-between max-w-7xl mx-auto px-4 md:px-6 lg:px-8 pt-[74px] md:pt-36 pb-12 md:pb-24 flex-1 gap-8 md:gap-16">
 
         {/* Left: Text */}
         <div className="flex-1 max-w-2xl">
-          <div className="label-tag mb-8 animate-fade-up typing-cursor">// KI-FIRST SOFTWARE STUDIO</div>
+          <div className="label-tag mb-3 md:mb-8 animate-fade-up typing-cursor">// KI-FIRST SOFTWARE STUDIO</div>
 
           <h1
-            className="section-title text-4xl md:text-6xl lg:text-7xl font-black leading-tight mb-8 animate-fade-up"
+            className="section-title text-4xl md:text-6xl lg:text-7xl font-black leading-tight mb-5 md:mb-8 animate-fade-up"
             style={{ animationDelay: '0.1s', opacity: 0, animationFillMode: 'forwards' }}
           >
             <span className="text-silver block">AI-Powered</span>
@@ -104,7 +104,7 @@ export default function Hero() {
         </div>
 
         {/* Right: Logo */}
-        <div className="flex-shrink-0 relative">
+        <div className="flex-shrink-0 relative self-center lg:self-auto">
           <div className="relative w-64 h-64 lg:w-80 lg:h-80 animate-float">
             {/* Glow rings */}
             <div className="absolute inset-0 rounded-full bg-neon/5 animate-neon-pulse scale-125" />

@@ -78,7 +78,7 @@ export default function Services() {
             Unsere <span className="neon-text">Services</span>
           </h2>
           <p className="font-body text-muted text-lg max-w-2xl mx-auto">
-            Kein Agentur-Overhead. Kein Bullshit. Nur Software die funktioniert.
+            Kein Agentur-Overhead. Keine Kompromisse. Nur Software die liefert.
           </p>
         </div>
 

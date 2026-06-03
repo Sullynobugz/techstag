@@ -91,7 +91,7 @@ export default function Hero() {
             className="font-body text-lg text-muted leading-relaxed mb-10 max-w-xl animate-fade-up"
             style={{ animationDelay: '0.2s', opacity: 0, animationFillMode: 'forwards' }}
           >
-            Wir bauen KI-Produkte die wirklich funktionieren — keine Demos, keine Buzzwords.
+            Wir bauen KI-Produkte die in der Praxis bestehen — durchdacht, messbar, skalierbar.
             Vom Business-Tool bis zur Automatisierungsplattform. Alles KI-First.
           </p>
 

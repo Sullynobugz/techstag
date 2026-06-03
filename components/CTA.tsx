@@ -33,7 +33,7 @@ export default function CTA() {
         {/* Bottom tagline */}
         <div className="mt-16 pt-8 border-t border-neon/10">
           <p className="font-mono text-[11px] text-muted/50 tracking-widest uppercase">
-            Kein Bullshit. Kein Overhead. Nur Software die funktioniert.
+            Kein Overhead. Keine leeren Versprechen. Nur Ergebnisse die zählen.
           </p>
         </div>
       </div>

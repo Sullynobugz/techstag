@@ -14,7 +14,7 @@ const SERVICES = [
 
 const STEPS = [
   { n: '01', title: 'Erstgespräch', desc: 'Wir analysieren deine Situation und Ziele — 30 Minuten, kostenlos.' },
-  { n: '02', title: 'Strategie', desc: 'Konkreter Plan mit Zeitrahmen und Investition — kein Blabla.' },
+  { n: '02', title: 'Strategie', desc: 'Konkreter Plan mit Zeitrahmen und Investition — präzise, nachvollziehbar.' },
   { n: '03', title: 'Umsetzung', desc: 'Wir bauen. Du siehst Ergebnisse, keine Zwischenberichte.' },
 ]
 

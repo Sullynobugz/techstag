@@ -20,26 +20,37 @@ export default function Header() {
       }`}
     >
       <nav className="max-w-7xl mx-auto px-6 lg:px-8">
-        <div className="flex items-center justify-between h-18 py-4">
+        <div className="flex items-center justify-between pt-3 pb-0">
 
           {/* Logo */}
-          <Link href="/" className="flex items-center gap-3 group">
-            <div className="w-14 h-14 rounded-lg overflow-hidden relative ring-1 ring-neon/30 group-hover:ring-neon/70 transition-all group-hover:shadow-neon-sm">
+          <Link href="/" className="flex items-end gap-2 group self-end">
+            {/* Hirschkopf — obere 68% des quadratischen Logos */}
+            <div className="flex-shrink-0 overflow-hidden" style={{ width: 130, height: 89 }}>
               <img
                 src="/assets/logo-futuristic.jpg"
                 alt="TechStag"
-                style={{ position: 'absolute', width: '140%', height: '140%', top: 0, left: '-20%', objectFit: 'cover' }}
+                style={{ width: 130, height: 'auto' }}
+                className="drop-shadow-[0_0_8px_rgba(0,212,255,0.4)] group-hover:drop-shadow-[0_0_14px_rgba(0,212,255,0.7)] transition-all duration-300"
               />
             </div>
-            <span className="font-display text-lg font-bold tracking-widest text-neon uppercase">
-              TechStag
-            </span>
+            {/* TECHSTAG-Schriftzug — untere 26% des Logos, unabhängig skaliert */}
+            <div className="flex-shrink-0 overflow-hidden" style={{ width: 200, height: 44 }}>
+              <img
+                src="/assets/logo-futuristic.jpg"
+                alt=""
+                aria-hidden="true"
+                style={{ width: 200, height: 'auto', marginTop: -140 }}
+              />
+            </div>
           </Link>
 
           {/* Desktop Nav */}
           <div className="hidden md:flex items-center gap-8">
             {[
               { href: '#services', label: 'Services' },
+              { href: '#portfolio', label: 'Portfolio' },
+              { href: '#produkte', label: 'Produkte' },
+              { href: '/contact', label: 'Kontakt' },
             ].map(({ href, label }) => (
               <a
                 key={href}
@@ -70,6 +81,9 @@ export default function Header() {
           <div className="md:hidden border-t border-neon/20 py-6 flex flex-col gap-4">
             {[
               { href: '#services', label: 'Services' },
+              { href: '#portfolio', label: 'Portfolio' },
+              { href: '#produkte', label: 'Produkte' },
+              { href: '/contact', label: 'Kontakt' },
             ].map(({ href, label }) => (
               <a
                 key={href}

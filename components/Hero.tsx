@@ -61,11 +61,6 @@ export default function Hero() {
         <div className="relative w-16 h-16 corner-br" />
       </div>
 
-      {/* Vertical data stream — links */}
-      <div className="absolute left-4 top-1/4 bottom-1/4 w-px bg-gradient-to-b from-transparent via-neon/20 to-transparent pointer-events-none">
-        <div className="absolute top-0 left-0 w-px h-8 bg-neon/60 animate-scan" style={{ animationDuration: '3s' }} />
-      </div>
-
       {/* Main content */}
       <div className="relative z-10 flex flex-col lg:flex-row items-center justify-between max-w-7xl mx-auto px-6 lg:px-8 pt-36 pb-24 flex-1 gap-16">
 
